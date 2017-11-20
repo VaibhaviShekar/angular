@@ -1,0 +1,26 @@
+<!-- <p>
+    {{animal.name | uppercase}} DETAILS <br/> Name={{animal.name}} <br/> Id = {{animal.id}}
+</p> -->
+
+<!-- <div>
+    <label>Name:
+      <input [(ngModel)]="animal.name" placeholder="name">
+    </label>
+    <label>Noise:
+        <input [(ngModel)]="animal.noise" placeholder="noise">
+      </label>
+
+</div> -->
+
+
+<ul class="animals">
+    <li *ngFor="let animal of animals" (click)="onSelect(animal.id)">
+        <!-- <span class="badge">{{animal.id}}</span>
+        <span class="badge">{{animal.name}}</span>
+        <span class="badge"> {{animal.noise}}</span> -->
+
+        <a routerLink="/detail/{{animal.id}}">
+            <span class="badge">{{animal.id}}</span> {{animal.name}}
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,20 @@
+h2 {
+    color: green;
+    background-color: white;
+    background-size: 2px;
+    animation: mymove 15s infinite;
+    position: relative;
+}
+
+#h {
+    animation-timing-function: linear
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 1400px;
+    }
+}
